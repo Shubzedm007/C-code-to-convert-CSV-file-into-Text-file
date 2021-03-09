@@ -2,31 +2,22 @@
 #include<stdlib.h>
 #include<stdio.h>
 #include<fstream>
-
 using namespace std ;
-
 #define INPUT_FILE "input.csv" 
-
 int show_file_content() ;		// Prints input file contents on the console
-
 int main()
 {
 	show_file_content() ;
-	
 	return 0 ;
 }
-
 int show_file_content()
 {
 	ifstream A ;
 	ofstream B ;
-	
 	int rows = 1 ;
 	char c ;
-	
 	A.open( INPUT_FILE, ios :: binary ) ;
 	B.open( "output.txt", ios :: out | ios :: trunc ) ;
-	
 	if( !A )
 		cout << "\n Error in opening file" ;
 	else
